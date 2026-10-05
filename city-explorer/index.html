@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Explorer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 1. Antetul si meniul de navigare -->
+    <header class="site-header">
+        <h1>City Explorer</h1>
+        <nav class="menu">
+            <a href="#destinatii">Destinații</a>
+            <a href="#planifica">Planifică</a>
+            <a href="#recomandari">Recomandări</a>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- 2. Sectiunea Destinatii cu 5 carduri -->
+        <section id="destinatii">
+            <h2>Destinații</h2>
+            <div class="cards">
+                <article class="card">
+                    <h3>Paris</h3>
+                    <p>Franța</p>
+                    <p>Orașul luminilor, ideal pentru vizitarea muzeelor și a turnului Eiffel.</p>
+                    <p>Durata recomandată: 4 zile</p>
+                </article>
+                <article class="card">
+                    <h3>Roma</h3>
+                    <p>Italia</p>
+                    <p>Un muzeu în aer liber, plin de arhitectură istorică și culinară excelentă.</p>
+                    <p>Durata recomandată: 5 zile</p>
+                </article>
+                <article class="card featured">
+                    <h3>Kyoto</h3>
+                    <p>Japonia</p>
+                    <p>Fosta capitală imperială, renumită pentru templele sale tradiționale.</p>
+                    <p>Durata recomandată: 7 zile</p>
+                </article>
+                <article class="card">
+                    <h3>New York</h3>
+                    <p>SUA</p>
+                    <p>Metropola aglomerată, cu zgârie-nori impresionanți și Central Park.</p>
+                    <p>Durata recomandată: 6 zile</p>
+                </article>
+                <article class="card">
+                    <h3>Cape Town</h3>
+                    <p>Africa de Sud</p>
+                    <p>Destinația perfectă pentru peisaje spectaculoase și safari.</p>
+                    <p>Durata recomandată: 5 zile</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- 3. Sectiunea Planifica (Formular) -->
+        <section id="planifica">
+            <h2>Planifică excursia</h2>
+            <form>
+                <label for="name">Nume</label>
+                <input id="name" name="name" type="text">
+
+                <label for="destination">Destinație</label>
+                <select id="destination" name="destination">
+                    <option value="">Alege...</option>
+                    <option value="Lisabona">Lisabona</option>
+                    <option value="Paris">Paris</option>
+                    <option value="Roma">Roma</option>
+                    <option value="Kyoto">Kyoto</option>
+                    <option value="New York">New York</option>
+                    <option value="Cape Town">Cape Town</option>
+                </select>
+
+                <label for="days">Număr de zile</label>
+                <input id="days" name="days" type="number">
+
+                <button type="submit">Planifică excursia</button>
+            </form>
+        </section>
+
+        <!-- 4. Secțiunea Recomandări -->
+        <section id="recomandari">
+            <h2>Recomandări</h2>
+            <ul>
+                <li>Cumpărați biletele de avion cu cel puțin 3 luni în avans pentru prețuri reduse.</li>
+                <li>Încheiați o asigurare de călătorie valabilă pe toată durata deplasării.</li>
+                <li>Explorați străzile lăturalnice pentru a descoperi bucătăria locală autentică.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- 5. Subsolul paginii -->
+    <footer class="site-footer">
+        Nume Prenume, 2026
+    </footer>
+</body>
+</html>
