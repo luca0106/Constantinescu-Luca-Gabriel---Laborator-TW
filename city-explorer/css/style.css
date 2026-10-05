@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* 1. Antet cu Flexbox */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    background-color: #1f3b5d;
+    color: #ffffff;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* 2. Aspectul Formularului */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 8px;
+}
+
+input:focus, select:focus {
+    outline: 2px solid #5b3fd9;
+}
+
+/* 3. Așezarea destinațiilor pe Grid (Adaptare la ecrane mici încorporată) */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    padding: 20px;
+    border: 1px solid #d0d7e2;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 4. Evidențierea destinației folosind clasa featured */
+.card.featured {
+    border: 2px solid #5b3fd9;
+    background-color: #eef4fa;
+}
+
+/* Stiluri adiționale pentru vizibilitate clară */
+section {
+    padding: 20px;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+}
