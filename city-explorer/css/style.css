@@ -1,85 +1,205 @@
+/* --- 1. Setări generale și Tipografie Modernă --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 * {
     box-sizing: border-box;
-}
-
-body {
-    font-family: sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* 1. Antet cu Flexbox */
+body {
+    /* Font modern (Inter), fundal ușor gri pentru a scoate în evidență cardurile albe */
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #f8fafc;
+    color: #334155;
+    line-height: 1.6;
+}
+
+/* --- 2. Antet (Header) și Navigare --- */
 .site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 32px;
-    background-color: #1f3b5d;
-    color: #ffffff;
+    padding: 20px 5%;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    /* Antetul rămâne sus când dai scroll */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.site-header h1 {
+    color: #0f172a;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .menu {
     display: flex;
-    gap: 20px;
+    gap: 32px;
 }
 
 .menu a {
-    color: #ffffff;
+    color: #64748b;
     text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
 }
 
-/* 2. Aspectul Formularului */
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
+.menu a:hover {
+    color: #3b82f6; /* Albastru modern la hover */
 }
 
-label {
-    margin-top: 10px;
-    margin-bottom: 5px;
+/* --- 3. Structura Principală --- */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 5%;
 }
 
-input, select, button {
-    width: 100%;
-    padding: 8px;
+section {
+    margin-bottom: 80px;
 }
 
-input:focus, select:focus {
-    outline: 2px solid #5b3fd9;
+h2 {
+    color: #0f172a;
+    font-size: 2rem;
+    margin-bottom: 32px;
+    font-weight: 600;
 }
 
-/* 3. Asezarea destinatiilor pe Grid (Adaptare la ecrane mici incorporata) */
+/* --- 4. Cardurile pentru Destinații (CSS Grid) --- */
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+    /* Grid adaptabil: minim 280px, maxim cât e loc */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
 }
 
 .card {
-    padding: 20px;
-    border: 1px solid #d0d7e2;
-    border-radius: 10px;
-    margin: 15px 0;
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    /* Tranziție fină pentru ridicarea cardului */
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+    border-color: transparent;
 }
 
-/* 4. Evidentierea destinatiei folosind clasa featured */
+.card h3 {
+    color: #0f172a;
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #64748b;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+
+/* Stilizează diferit ultimul paragraf (Durata recomandată) */
+.card p:last-child {
+    margin-bottom: 0;
+    font-weight: 600;
+    color: #3b82f6;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Cardul Evidențiat (Featured) */
 .card.featured {
-    border: 2px solid #5b3fd9;
-    background-color: #eef4fa;
+    border: 2px solid #3b82f6;
+    background-color: #eff6ff;
 }
 
-/* Stiluri aditionale pentru vizibilitate clara */
-section {
-    padding: 20px;
+/* --- 5. Formularul de Planificare --- */
+form {
+    background-color: #ffffff;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    border: 1px solid #e2e8f0;
+    max-width: 500px;
 }
 
+label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #475569;
+    font-size: 0.95rem;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 24px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #0f172a;
+    background-color: #f8fafc;
+    transition: all 0.2s ease;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    background-color: #ffffff;
+    /* Focus ring modern (strălucire albastră) */
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+button {
+    background-color: #3b82f6;
+    color: #ffffff;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #2563eb;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* --- 6. Lista de Recomandări --- */
+#recomandari ul {
+    list-style: none;
+}
+
+#recomandari li {
+    background: #ffffff;
+    margin-bottom: 12px;
+    padding: 16px 20px;
+    border-radius: 8px;
+    border-left: 4px solid #3b82f6;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    color: #475569;
+}
+
+/* --- 7. Subsol (Footer) --- */
 .site-footer {
     text-align: center;
-    padding: 20px;
-    background-color: #f1f1f1;
+    padding: 40px;
+    color: #94a3b8;
+    border-top: 1px solid #e2e8f0;
+    font-size: 0.9rem;
 }
