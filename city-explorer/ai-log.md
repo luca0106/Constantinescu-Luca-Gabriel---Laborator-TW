@@ -17,3 +17,11 @@ Acest fișier documentează utilizarea asistenților bazați pe Inteligență Ar
 * **Prompt utilizat:** 
   > "Explica-mi tot ce trebuie sa fac si ce scop are fiecare pas, si da-mi si codul pentru fiecare etapa"
 * **Rezultat:** Modelul a explicat pașii pentru crearea și popularea fișierelor `destinatii.js` (date), `utils/destinatii.js` (funcții map/filter/reduce), `api/orase.js` (apeluri fetch) și integrarea lor centralizată în `main.jsx`. 
+
+## Sesiunea 3: Componente React, props și state (Laborator 3)
+* **Data:** 2 Noiembrie 2026
+* **Modelul folosit:** Gemini
+* **Scop:** Structurarea interfeței aplicației City Explorer în componente React (`Rezumat`, `DestinatieCard`, `ListaDestinatii`, `FormularDestinatie`), gestiunea stării locale și a proprietăților (props), tratarea evenimentelor și stilizarea layout-ului cu CSS Grid și Flexbox.
+* **Prompt utilizat:** 
+  > "Explica-mi tot ce trebuie sa fac si ce scop are fiecare pas, si da-mi si codul pentru fiecare etapa"
+* **Rezultat:** Modelul a furnizat pașii ordonați și codul complet pentru fișierele de componente, actualizarea stilurilor (`index.css` și `App.css`), logica de adăugare și marcare vizitat/nevizitat în `App.jsx`, precum și implementarea cerinței suplimentare de ștergere a cardurilor. 
