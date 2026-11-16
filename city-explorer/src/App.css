@@ -155,7 +155,7 @@ button:disabled {
   margin-bottom: 1.4rem;
   padding: 0.9rem 1rem;
   border: 1px solid #d8dbe0;
-  border-radius: 10px; /* Corecția 6: 10px (era 10 fără px) */
+  border-radius: 10px;
 }
 
 .panou h2 {
@@ -182,7 +182,6 @@ button:disabled {
   color: #4b5563;
   font-size: 0.95rem;
 }
-/* Corecția 7: s-a eliminat regula duplicată .panou h2 { margin: 0; } care anula margin-bottom */
 
 /* Paginare (Ex. 5) */
 .paginare {

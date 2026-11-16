@@ -18,7 +18,7 @@ export default function PanouStatistici() {
       } catch (err) {
         setEroare(err.message)
       } finally {
-        // Corecția 5: Mutat în finally pentru ca indicatorul de încărcare să se oprească și la eroare
+        // Corecția 5: Oprirea încărcării în finally
         setIncarcare(false)
       }
     }
@@ -33,10 +33,10 @@ export default function PanouStatistici() {
     return <p className="stare eroare">Statistici indisponibile: {eroare}</p>
   }
 
-  // Corecția 3: operatorul >= în loc de > pentru a include destinațiile egale cu pragul (ex: Porto cu 3 zile)
+  // Corecția 3: operatorul >= în loc de > (include și destinațiile egale cu pragul)
   const filtrate = destinatii.filter((d) => d.zile >= Number(prag))
 
-  // Corecția 1: reduce aplicat pe filtrate, nu pe toate destinațiile
+  // Corecția 1: calcul pe filtrate, nu pe toate destinațiile
   const totalZile = filtrate.reduce((suma, d) => suma + d.zile, 0)
   const medie = filtrate.length === 0 ? 0 : totalZile / filtrate.length
 
@@ -48,13 +48,13 @@ export default function PanouStatistici() {
         <input
           type="number"
           value={prag}
-          // Corecția 4: preluarea valorii e.target.value în loc de pasarea întregului event
+          // Corecția 4: preluarea valorii din eveniment
           onChange={(e) => setPrag(e.target.value)}
         />{' '}
         zile
       </label>
 
-      {/* Corecția 2: verificarea explicită === 0 pentru afișarea mesajului doar când nu există rezultate */}
+      {/* Corecția 2: verificare explicită === 0 */}
       {filtrate.length === 0 && (
         <p className="gol">Nicio destinație cu cel puțin {prag} zile.</p>
       )}

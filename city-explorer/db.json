@@ -67,14 +67,6 @@
       "tara": "Japonia",
       "zile": 5,
       "vizitat": false
-    },
-    {
-      "oras": "Pitesti",
-      "tara": "Romania",
-      "zile": 4,
-      "vizitat": false,
-      "id": "QQssMNMLQSk"
     }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+  ]
 }

@@ -86,8 +86,8 @@ export default function App() {
     <main>
       <h1>City Explorer</h1>
 
-      {/* Panoul de statistici (se activează la Exercițiul 4) */}
-      {/* <PanouStatistici /> */}
+      {/* Panoul de statistici (Exercițiul 4) */}
+      <PanouStatistici />
 
       {incarcare && <p className="stare">Se încarcă destinațiile...</p>}
       {eroare && <p className="stare eroare">A apărut o eroare: {eroare}</p>}
