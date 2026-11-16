@@ -1,4 +1,4 @@
-export default function DestinatieCard({ destinatie, onToggle, onDelete }) {
+export default function DestinatieCard({ destinatie, onToggle }) {
   const { id, oras, tara, zile, vizitat } = destinatie
 
   return (
@@ -9,15 +9,6 @@ export default function DestinatieCard({ destinatie, onToggle, onDelete }) {
       <button type="button" onClick={() => onToggle(id)}>
         {vizitat ? 'Vizitat' : 'Marchează vizitat'}
       </button>
-      {onDelete && (
-        <button
-          type="button"
-          onClick={() => onDelete(id)}
-          style={{ marginTop: '0.4rem', background: '#dc2626' }}
-        >
-          Șterge
-        </button>
-      )}
     </article>
   )
 }

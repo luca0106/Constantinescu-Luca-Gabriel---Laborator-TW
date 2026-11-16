@@ -25,3 +25,13 @@ Acest fișier documentează utilizarea asistenților bazați pe Inteligență Ar
 * **Prompt utilizat:** 
   > "Explica-mi tot ce trebuie sa fac si ce scop are fiecare pas, si da-mi si codul pentru fiecare etapa"
 * **Rezultat:** Modelul a furnizat pașii ordonați și codul complet pentru fișierele de componente, actualizarea stilurilor (`index.css` și `App.css`), logica de adăugare și marcare vizitat/nevizitat în `App.jsx`, precum și implementarea cerinței suplimentare de ștergere a cardurilor. 
+
+
+## Sesiunea 4: Date de la server și formulare cu validare (Laborator 4)
+* **Data:** 16 Noiembrie 2026
+* **Modelul folosit:** Gemini
+* **Scop:** Preluarea asincronă a datelor dintr-un mock server (json-server pe port 3001), tratarea stărilor de încărcare și eroare, validarea datelor dintr-un formular cu stare unificată, căutare și filtrare locală (client-side), tratarea cazurilor de listă goală, depanarea celor șapte erori din componenta de statistici (`PanouStatistici.jsx`), optimizarea performanței prin paginare pe seturi mari de date (2000 destinații pe port 3002) și completarea Fișei de laborator nr. 4.
+* **Prompt utilizat:** 
+  > "da-mi toti pasii necesari in ordine, pentru a rezolva acest laborator. Trebuie sa completez si aceasta fisa pe care ti-am trimis o."
+  > "as vrea sa imi completezi tu automat codul in fisiere si ulterior mie sa imi ramana doar de completat fisa."
+* **Rezultat:** Modelul a explicat pașii metodologici, a furnizat predicțiile și valorile măsurate pentru fișă, a implementat logica de cereri HTTP (`getDestinatii`, `postDestinatie`, `patchVizitat`) în `src/api/destinatii.js`, a creat componentele `Cautare.jsx`, `PanouStatistici.jsx` (cu corectarea erorilor logice și de stil), a adăugat validarea în `FormularDestinatie.jsx`, a actualizat `App.jsx` și `App.css`, a generat scriptul `genereaza.js` pentru setul mare de date și a realizat migrarea fișierelor direct în rădăcina proiectului.
